@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="rumenz" class="com.rumenz.Rumenz">
+        <property name="id" value="123"/>
+        <property name="name" value="入门小站"/>
+    </bean>
+    <bean id="superRumenz" class="com.rumenz.SuperRumenz" parent="rumenz" primary="true">
+        <property name="id" value="456"/>
+        <property name="name" value="入门小站-子类"/>
+        <property name="type" value="1"/>
+    </bean>
+</beans>
